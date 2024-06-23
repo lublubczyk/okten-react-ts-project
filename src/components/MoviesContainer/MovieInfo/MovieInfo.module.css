@@ -1,0 +1,26 @@
+.MovieInfo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.PosterContainer {
+    width: 40%;
+}
+
+.InfoContainer {
+    padding: 20px 30px 0px 50px;
+    background-color: rgb(77, 88, 137);
+    width: 40%;
+    border-radius: 20px 20px 0 0;
+}
+
+.Genres {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Dark{
+    background-color: rgb(45, 109, 109);
+}

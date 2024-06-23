@@ -1,0 +1,10 @@
+.HeaderLinks {
+    width: 40%;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.HeaderLinks a[class='active']{
+    color: rgb(244, 208, 160);
+}
