@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { IGenre } from "../../../interfaces";
 import { PosterPreview } from "../PosterPreview";
-import { RatingStars } from "../RatingStars";
+import { StarsRating } from "../StarsRating";
 import { movieInfoActions } from "../../../redux";
 import style from './MovieInfo.module.css';
 
@@ -31,7 +31,7 @@ const MovieInfo = () => {
                 </div>
                 <div className={themeStyle}>
                     <h1>{movieInfo.title}</h1>
-                    <RatingStars voteAverage={movieInfo.vote_average} />
+                    <StarsRating voteAverage={movieInfo.vote_average} />
                     <h3>Release date: {movieInfo.release_date}</h3>
                     <h3>Runtime: {movieInfo.runtime}</h3>
                     <h3>Genres:</h3>

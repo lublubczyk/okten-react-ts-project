@@ -2,11 +2,11 @@ import { Rating } from "@mui/material";
 import { FC } from "react";
 import { useLocation } from "react-router-dom";
 
-import style from './RatingStars.module.css';
+import style from './StarsRating.module.css';
 
 interface IProps { voteAverage: number };
 
-const RatingStars: FC<IProps> = ({ voteAverage }) => {
+const StarsRating: FC<IProps> = ({ voteAverage }) => {
 
     const { pathname } = useLocation();
     const size = pathname.endsWith('info') ? 'large' : 'small';
@@ -23,4 +23,4 @@ const RatingStars: FC<IProps> = ({ voteAverage }) => {
     )
 };
 
-export { RatingStars };
+export { StarsRating };

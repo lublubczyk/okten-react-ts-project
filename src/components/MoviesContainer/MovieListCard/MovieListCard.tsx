@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { IMovie } from "../../../interfaces";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { PosterPreview } from "../PosterPreview";
-import { RatingStars } from "../RatingStars";
+import { StarsRating } from "../StarsRating";
 import { movieInfoActions } from "../../../redux";
 import style from './MovieListCard.module.css';
 
@@ -27,7 +27,7 @@ const MovieListCard: FC<IProps> = ({movie}) => {
         <div className={themeStyle} onClick={getInfo}>
             <PosterPreview posterPath={poster_path} />
             <div>{title}</div>
-            <RatingStars voteAverage={vote_average} />
+            <StarsRating voteAverage={vote_average} />
         </div>
     )
 };

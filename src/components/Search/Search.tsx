@@ -16,7 +16,7 @@ const Search = () => {
     return (
         <div>
             <form onSubmit={handleSubmit(search)}>
-                <input type="taxt" placeholder="print serch params" {...register('query')} />
+                <input type="taxt" placeholder="print serch params" {...register('query', { required: true})} />
                 <button>Search</button>
             </form>
         </div>
