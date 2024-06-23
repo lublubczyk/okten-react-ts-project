@@ -1,18 +1,14 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-import { useAppDispatch } from "../../hooks";
 import { ISearchParams } from "../../interfaces";
-import { moviesActions } from "../../redux";
 
 const Search = () => {
     
     const { register, handleSubmit, reset } = useForm<ISearchParams>();
-    const dispatch = useAppDispatch();
     const navigate = useNavigate();
 
-    const search =async ({ query }: ISearchParams) => {
-        await dispatch(moviesActions.getSearchMovie({ query }));
+    const search = ({ query }: ISearchParams) => {
         navigate(`/search/:${query}/movies?page=1`);
         reset()
     }

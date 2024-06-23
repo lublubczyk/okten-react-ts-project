@@ -25,7 +25,7 @@ const Footer = () => {
                     page={page}
                     onChange={changePage}
                 />
-                : <h1>{pathname.slice(1) }</h1>
+                : <h1>{pathname.slice(1) + ' id: '+ search.slice(1)}</h1>
             }
         </div>
     )

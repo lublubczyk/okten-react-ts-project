@@ -14,7 +14,7 @@ const MovieInfo = () => {
     const {search: id } = useLocation();
     const { themeTrigger } = useAppSelector(state => state.themeTrigger);
     const { movieInfo, isLoading, errors } = useAppSelector(state => state.moviesInfo);
-
+    
     const themeStyle = themeTrigger ? `${style.InfoContainer} ${style.Dark}` : style.InfoContainer;
     
     useEffect(() => {

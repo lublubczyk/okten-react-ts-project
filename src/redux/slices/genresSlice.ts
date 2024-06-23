@@ -34,11 +34,7 @@ const getGenres = createAsyncThunk<IGenres, void>(
 const genresSlice = createSlice({
     name: 'genresSlice',
     initialState,
-    reducers: {
-        setGenreId: (state, action) => {
-            state.genreId = action.payload;
-        }
-    },
+    reducers: {},
     extraReducers: builder =>
         builder
             .addCase(getGenres.fulfilled, (state, action) => {

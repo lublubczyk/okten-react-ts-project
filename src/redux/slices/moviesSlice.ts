@@ -60,11 +60,7 @@ const getSearchMovie = createAsyncThunk<IMovies, ISearchParams>(
 const moviesSlice = createSlice({
     name: 'movieSlice',
     initialState,
-    reducers: {
-        setQuery: (state, action) => {
-            state.query = action.payload;
-        }
-    },
+    reducers: {},
     extraReducers: builder =>
         builder
             .addCase(getAll.fulfilled, (state, action) => {
