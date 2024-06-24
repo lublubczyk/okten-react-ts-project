@@ -1,6 +1,6 @@
 .GenreBadge {
     width: calc(100% - 12px);
-    border: 2px solid;
+    border: 2px solid black;
     margin-top: 5px;
     box-shadow: 3px 5px 3px;
     display: flex;
@@ -13,9 +13,13 @@
 }
 
 .GenreBadge:hover {
-    box-shadow: 6px 8px 6px 3px;
+    box-shadow: 4px 5px 6px 3px;
 }
 
 .Dark {
     background-color: rgb(86, 111, 108);
+}
+
+.Active {
+    color: rgb(239, 163, 100);
 }

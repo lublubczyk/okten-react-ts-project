@@ -10,7 +10,7 @@ const PosterPreview: FC<IProps> = ({ posterPath }) => {
         <div>
             <img
                 src={baseURL.poster + posterPath}
-                alt="File Not Found"
+                alt="File Not Found Try Reloading the Page"
                 className={style.PosterPreview}
             />
         </div>

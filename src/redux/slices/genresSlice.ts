@@ -6,14 +6,12 @@ import { infoService } from "../../services";
 
 interface IState {
     genres: IGenres | null;
-    genreId: number | null;
     errors: IError | null;
     isLoading: boolean;
 };
 
 const initialState: IState = {
     genres: null,
-    genreId: null,
     errors: null,
     isLoading: null
 };

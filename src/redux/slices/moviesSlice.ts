@@ -6,14 +6,12 @@ import { moviesService } from "../../services";
 
 interface IState {
     movies: IMovies | null;
-    query: string | null;
     errors: IError | null;
     isLoading: boolean;
 };
 
 const initialState: IState = {
     movies: null,
-    query: null,
     errors: null,
     isLoading: null
 };
@@ -63,15 +61,6 @@ const moviesSlice = createSlice({
     reducers: {},
     extraReducers: builder =>
         builder
-            .addCase(getAll.fulfilled, (state, action) => {
-                state.movies = action.payload;
-            })
-            .addCase(getGenreMovies.fulfilled, (state, action) => {
-                state.movies = action.payload;
-            })
-            .addCase(getSearchMovie.fulfilled, (state, action) => {
-                state.movies = action.payload;
-            })
             .addMatcher(isRejected(getAll, getGenreMovies, getSearchMovie), (state, action) => {
                 state.isLoading = false;
                 state.errors = action.payload;
@@ -79,7 +68,8 @@ const moviesSlice = createSlice({
             .addMatcher(isPending(getAll, getGenreMovies, getSearchMovie), state => {
                 state.isLoading = true;
             })
-            .addMatcher(isFulfilled(getAll, getGenreMovies, getSearchMovie), state => {
+            .addMatcher(isFulfilled(getAll, getGenreMovies, getSearchMovie), (state, action) => {
+                state.movies = action.payload;
                 state.isLoading = false;
                 state.errors = null;
             })
